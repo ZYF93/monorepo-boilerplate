@@ -1,0 +1,17 @@
+declare module "@babel/preset-env" {
+  import type { PluginItem } from "@babel/core";
+  const preset: PluginItem;
+  export default preset;
+}
+
+declare module "@babel/preset-typescript" {
+  import type { PluginItem } from "@babel/core";
+  const preset: PluginItem;
+  export default preset;
+}
+
+declare module "@babel/plugin-proposal-decorators" {
+  import type { PluginItem } from "@babel/core";
+  const plugin: PluginItem;
+  export default plugin;
+}

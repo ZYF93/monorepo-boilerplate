@@ -1,0 +1,7 @@
+{
+  "extends": "./tsconfig.base.json",
+  "compilerOptions": {
+    // 补充 DOM 库（前端特有）
+    "lib": ["ES2023", "DOM"]
+  }
+}

@@ -1,0 +1,43 @@
+{
+  "name": "new-monorepo",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "ci:install": "pnpm exec playwright install chromium",
+    "postinstall": "pnpm prebuild",
+    "prebuild": "pnpm -F router build && pnpm -F env build && pnpm -F http-request build && pnpm -F components build",
+    "ready": "vp check && vp run -r test && vp run -r build",
+    "dev": "vp run -r --parallel dev",
+    "prepare": "vp config",
+    "staged": "vp staged"
+  },
+  "dependencies": {
+    "@bc/components": "workspace:*",
+    "antd": "catalog:",
+    "tailwindcss": "catalog:"
+  },
+  "devDependencies": {
+    "@bc/config": "workspace:*",
+    "@eslint/js": "^10.0.1",
+    "@playwright/test": "catalog:",
+    "@types/node": "catalog:",
+    "@types/react": "catalog:",
+    "@types/react-dom": "catalog:",
+    "@typescript/native-preview": "catalog:",
+    "eslint-plugin-react-hooks": "^7.1.1",
+    "eslint-plugin-react-refresh": "^0.5.2",
+    "eslint-plugin-simple-import-sort": "catalog:",
+    "eslint-plugin-unused-imports": "catalog:",
+    "globals": "^17.6.0",
+    "playwright": "catalog:",
+    "typescript": "catalog:",
+    "typescript-eslint": "^8.60.1",
+    "vite-plus": "catalog:",
+    "vitest": "catalog:"
+  },
+  "engines": {
+    "node": ">=26.3.0"
+  },
+  "packageManager": "pnpm@11.5.0"
+}

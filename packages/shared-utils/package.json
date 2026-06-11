@@ -1,0 +1,30 @@
+{
+  "name": "@bc/shared-utils",
+  "version": "0.0.0",
+  "description": "Shared utility functions for BC web packages.",
+  "files": [
+    "dist"
+  ],
+  "type": "module",
+  "exports": {
+    "./browser": "./dist/browser.mjs",
+    "./json": "./dist/json.mjs",
+    "./option": "./dist/option.mjs",
+    "./validator": "./dist/validator.mjs",
+    "./package.json": "./package.json"
+  },
+  "scripts": {
+    "build": "vp pack",
+    "dev": "vp pack --watch",
+    "test": "vp test",
+    "check": "vp check",
+    "prepublishOnly": "vp run build"
+  },
+  "devDependencies": {
+    "@bc/config": "workspace:*",
+    "@types/node": "catalog:",
+    "@typescript/native-preview": "catalog:",
+    "typescript": "catalog:",
+    "vite-plus": "catalog:"
+  }
+}

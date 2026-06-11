@@ -1,0 +1,39 @@
+{
+  "name": "@bc/create",
+  "version": "0.0.0",
+  "private": true,
+  "description": "BC 项目脚手架模板",
+  "keywords": [
+    "vite-plus-template"
+  ],
+  "bin": {
+    "bc-create": "./bin/index.js"
+  },
+  "files": [
+    "bin",
+    "templates"
+  ],
+  "type": "module",
+  "scripts": {
+    "check": "tsc --noEmit --allowJs --checkJs bin/index.js",
+    "test": "vp run check"
+  },
+  "devDependencies": {
+    "@types/node": "catalog:",
+    "typescript": "catalog:"
+  },
+  "createConfig": {
+    "templates": [
+      {
+        "name": "app",
+        "description": "BC React 应用模板",
+        "template": "./templates/app"
+      },
+      {
+        "name": "package",
+        "description": "BC TypeScript 包模板",
+        "template": "./templates/package"
+      }
+    ]
+  }
+}

@@ -1,0 +1,126 @@
+@import "tailwindcss";
+
+@layer base {
+  html {
+    /* 禁止移动端双击缩放 */
+    touch-action: manipulation;
+    /* 平滑滚动 */
+    scroll-behavior: smooth;
+    /* 统一系统无衬线字体，跨端兼容 */
+    font-family:
+      system-ui,
+      -apple-system,
+      BlinkMacSystemFont,
+      "Segoe UI",
+      Roboto,
+      "Helvetica Neue",
+      Arial,
+      sans-serif;
+    /* 抗锯齿优化字体渲染 */
+    -webkit-font-smoothing: antialiased;
+  }
+
+  body {
+    min-height: 100vh;
+    min-height: 100dvh;
+  }
+
+  img,
+  svg,
+  video {
+    max-width: 100%;
+    display: block;
+  }
+}
+
+@layer components {
+  .ant-table {
+    color: #111827;
+    font-size: 14px;
+  }
+
+  .ant-table-thead > tr > th {
+    height: 40px;
+    background: #f1f5fb;
+    color: #475467;
+    font-weight: 600;
+    border-bottom-color: #e5e7eb;
+  }
+
+  .ant-table-tbody > tr > td {
+    height: 63px;
+    border-bottom-color: #e5e7eb;
+  }
+
+  .ant-table-cell-fix-right {
+    box-shadow: -8px 0 14px rgba(15, 23, 42, 0.08);
+  }
+
+  .ant-table-cell-fix-left-last::after {
+    display: none;
+  }
+
+  .ant-table-wrapper .ant-table-cell {
+    padding: 8px 16px;
+  }
+
+  .ant-table-wrapper .ant-table-thead > tr > th {
+    white-space: nowrap;
+  }
+
+  .ant-btn-primary {
+    background: #1f6bff;
+    box-shadow: none;
+  }
+
+  .ant-btn-primary:hover {
+    background: #155eef !important;
+  }
+
+  .ant-btn > span {
+    letter-spacing: 0;
+  }
+
+  .ant-select-selector,
+  .ant-input,
+  .ant-btn {
+    border-radius: 4px;
+  }
+
+  .ant-tag {
+    border-radius: 4px;
+    margin-inline-end: 0;
+  }
+
+  .ant-pagination .ant-pagination-total-text {
+    color: #344054;
+  }
+
+  .ant-table-body::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+
+  .ant-table-body::-webkit-scrollbar-thumb {
+    background: #cfd5df;
+    border-radius: 999px;
+  }
+}
+
+@layer utilities {
+  /* 移动端1px细线 */
+  .border-hairline {
+    border-width: 1px;
+    @media (max-width: 767px) {
+      border-width: calc(1px / var(--tw-device-ratio, 1));
+    }
+  }
+
+  /* 安全底部留白（iPhone底部小黑条适配） */
+  .safe-bottom {
+    padding-bottom: env(safe-area-inset-bottom);
+  }
+  .safe-top {
+    padding-top: env(safe-area-inset-top);
+  }
+}

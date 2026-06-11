@@ -1,0 +1,39 @@
+{
+  "name": "@bc/config",
+  "version": "0.0.0",
+  "description": "所有配置都在这个包里",
+  "license": "MIT",
+  "author": "张一凡",
+  "files": [
+    "src"
+  ],
+  "type": "module",
+  "exports": {
+    "./theme.css": "./src/theme.css",
+    "./vite.react": "./src/vite.react.ts",
+    "./vite.pack": "./src/vite.pack.ts",
+    "./tsconfig.app.json": "./src/tsconfig.app.json",
+    "./tsconfig.pack.json": "./src/tsconfig.pack.json"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "dependencies": {
+    "@babel/core": "^7.29.0",
+    "@babel/plugin-proposal-decorators": "^7.29.0",
+    "@babel/preset-env": "^7.29.5",
+    "@babel/preset-typescript": "^7.28.5",
+    "@rolldown/plugin-babel": "^0.2.3",
+    "@storybook/addon-vitest": "catalog:",
+    "@tailwindcss/postcss": "catalog:",
+    "@tailwindcss/vite": "catalog:",
+    "@tsdown/css": "catalog:",
+    "@vitejs/plugin-react": "^6.0.1",
+    "@vitest/browser-playwright": "catalog:",
+    "autoprefixer": "catalog:",
+    "postcss": "catalog:",
+    "postcss-import": "catalog:",
+    "postcss-load-config": "catalog:",
+    "vitest": "catalog:"
+  }
+}

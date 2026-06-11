@@ -1,0 +1,28 @@
+{
+  "name": "bc-app",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vp dev",
+    "build": "tsc -b && vp build",
+    "lint": "vp lint .",
+    "preview": "vp preview",
+    "test": "vp test"
+  },
+  "dependencies": {
+    "@bc/components": "workspace:*",
+    "@bc/env": "workspace:*",
+    "@bc/router": "workspace:*",
+    "@e7w/easy-model": "catalog:",
+    "@micro-zoe/micro-app": "catalog:",
+    "antd": "catalog:",
+    "react": "catalog:",
+    "react-dom": "catalog:",
+    "react-router": "catalog:"
+  },
+  "devDependencies": {
+    "vite": "catalog:",
+    "vite-plus": "catalog:"
+  }
+}
