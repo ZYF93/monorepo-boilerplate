@@ -1,6 +1,6 @@
-# BC 前端 Monorepo
+# 前端 Monorepo
 
-这是基于 Vite+ 的 BC 前端 monorepo，统一管理应用、通用包、工具链配置和本地脚手架。仓库使用 `vp` 作为主要命令入口，包管理由 pnpm workspace 和 catalog 版本约束提供。
+这是基于 Vite+ 的前端 monorepo，统一管理应用、通用包、工具链配置和本地脚手架。仓库使用 `vp` 作为主要命令入口，包管理由 pnpm workspace 和 catalog 版本约束提供。
 
 ## 基本规则
 
